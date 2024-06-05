@@ -50,8 +50,8 @@ class BaseAI(Action, BaseComponent):
 		return [(index[0], index[1]) for index in path]
 
 class HostileEnemy(BaseAI):
-	def __init__(sef, entity: Actor):
-		supr().__init__(entity)
+	def __init__(self, entity: Actor):
+		super().__init__(entity)
 		self.path: List[Tuple[int, int]] = []
 
 	def perform(self) -> None:
